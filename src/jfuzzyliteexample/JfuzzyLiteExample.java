@@ -111,7 +111,7 @@ public class JfuzzyLiteExample {
           float d = Float.parseFloat(correcao.substring(46,52)); 
           System.out.println("Regular:" + d);
       
-          //Qualidade Pre
+          //Qualidade Preocupante
           float e = Float.parseFloat(correcao.substring(62,68)); 
           System.out.println("Preocupante:" + e);
       
