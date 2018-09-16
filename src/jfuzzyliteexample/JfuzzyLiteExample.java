@@ -85,5 +85,35 @@ public class JfuzzyLiteExample {
         parametroinput.setValue(3);
         engine.process();
         System.out.println("Tamanho: " + tamanhoinput.getValue() + "\nParametro:  " + parametroinput.getValue() + "\nQualidade: " + qualidadeoutput.fuzzyOutputValue());
+        
+         
+          //Tratamento da string para conversão em float
+          System.out.println("\n*=====* Tratamento da String *=====*\n");
+  
+          
+          //Retirada do da virgula pelo ponto para conversao de char para decimal
+          String correcao = qualidadeoutput.fuzzyOutputValue().replace(',', '.');
+          System.out.println("Excelente:" + correcao);
+      
+          //Qualidade Excelente
+          float a = Float.parseFloat(correcao.substring(0, 5)); 
+          System.out.println("Excelente:" + a);
+         
+          //Qualidade Muito Bom
+          float b = Float.parseFloat(correcao.substring(18,23)); 
+          System.out.println("Muito Bom:" + b);
+         
+          //Qualidade Bom
+          float c = Float.parseFloat(correcao.substring(34,40)); 
+          System.out.println("Bom:" + c);
+   
+          //Qualidade Regular
+          float d = Float.parseFloat(correcao.substring(46,52)); 
+          System.out.println("Regular:" + d);
+      
+          //Qualidade Pre
+          float e = Float.parseFloat(correcao.substring(62,68)); 
+          System.out.println("Preocupante:" + e);
+      
     }
 }
